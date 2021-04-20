@@ -1,6 +1,6 @@
 # テーブル設計
 
-＃＃users テーブル
+## users テーブル
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
 | name     | string | null: false |
@@ -49,3 +49,32 @@
 
 - belongs_to :room
 - belongs_to :user
+
+
+# テーブル設計
+
+## users テーブル
+| Column    | Type   | Options     |
+| --------  | ------ | ----------- |
+| email     | string | null: false |
+| password  | string | null: false |
+| name      | string | null: false |
+| profile   | text   | null: false |
+| name      | text   | null: false |
+| occupation| text   | null: false |
+
+## prototypes テーブル
+| Column    | Type         | Options     |
+| --------  | ------------ | ----------- |
+| title     | string       | null: false |
+| catch_copy| text         | null: false |
+| concept   | text         | null: false |
+| image     | ActiveStorageで実装         |
+| user      | references   |             |
+
+## comments テーブル
+| Column    | Type         | Options     |
+| --------  | ------------ | ----------- |
+| text      | text         | null: false |
+| user      | references   |             |
+| prototypes| references   |             |
